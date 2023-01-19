@@ -1,0 +1,25 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+                    <!--x:Class="_09_Calculatrice_WPF.Ressources.CustomResources">-->
+    <!-- Button Style-->
+    <Style TargetType="Button" >
+        <Setter Property="Background" Value="AliceBlue"/>
+        <Setter Property="Foreground" Value="Blue"/>
+        <Setter Property="Margin" Value="4"/>
+        <!--<EventSetter Event="Click" Handler="Key_Click" />-->
+    </Style>
+    <!-- Special Button Style-->
+    <!-- Extended Button Style : On répète PAS inutilement les 3 premières propriétés -->
+    <Style TargetType="Button"
+               BasedOn="{StaticResource {x:Type Button}}"
+               x:Key="DelButton">
+        <Setter Property="FontWeight" Value="Bold"/>
+    </Style>
+
+    <Style TargetType="Button"
+               BasedOn="{StaticResource DelButton}"
+               x:Key="OperatorStyle">
+        <Setter Property="BorderBrush" Value="Green"/>
+        <Setter Property="Foreground" Value="Green"/>
+    </Style>
+</ResourceDictionary>
